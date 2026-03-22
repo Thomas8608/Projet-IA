@@ -17,4 +17,4 @@ Dans une seconde partie, nous analyserons le résultat de l'analyse au vu des re
 Une grande partie des données de référence proviennent d'une source, qui est la suivante : [1] *From FLOPs to Footprints: The Resource Cost of Artificial Intelligence* ; Sophia Falk, Nicholas Kluge Correa, Sasha Luccioni, Lisa Biber-Freudenberger, and Aimee van Wynsberghe ; 3 Décembre 2025.
 
 Nous avons fait le choix de commencer le modèle en partant des requêtes. Ces requêtes ne sont autres que des chaînes de caractères découpés en tokens. Ces tokens sont traités dans les data centers par des FLOPS (number of floating-point operations it can perform per second). Ainsi, il suffit de faire le lien entre requêtes et nombre de calculs associés (FLOPs) pour pouvoir remonter au nombre de GPUs nécessaires. Avec cette quantité, nous retrouvons la demande en matériaux associée.
-"""
+
