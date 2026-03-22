@@ -1,20 +1,15 @@
 # Project-AI
 ## Modeling material demand in relation to artificial intelligence demand.
 
-A l'heure où l'intelligence artificielle (IA) explose et devient la 4e grande révolution technologique, nous sommes constamment exposés au challenge énergétique qui en découle. Cependant, l'aspect matériel est quant à lui très peu souvent abordé. Cette étude a pour but de mettre le doigt sur les consommations en matériaux pour soutenir la demande de l'IA.
+At a time when artificial intelligence (AI) is exploding and becoming the 4th great technological revolution, we are constantly exposed to the energy challenge that comes with it. However, the material aspect is rarely addressed. This study aims to shed light on material consumption required to support the growing demand for AI.
+
+The objective is to model the demand for materials necessary for the proper functioning of generative AI in the near future. The reference AI is ChatGPT 4 (around 17,500 billion parameters). It is important to note that the results concern only the material requirements for the operation of GPU units. Broader infrastructure components, such as networks, storage, and cooling systems, are not taken into account in this analysis.
+
+The GPU chip studied is the NVIDIA A100, used by OpenAI, Meta, and Microsoft. The ChatGPT 4 model will therefore serve as the reference in the calculations, with the assumption that the material consumption of other generative AIs is similar.
+
+In a first part, we will look at the modelling of material requirements relative to AI demand. In a second part, we will analyse the results in light of current material resources, while taking into account geographical, geopolitical, and commercial factors.
+
+I chose to start the model from requests. These requests are nothing more than strings of characters broken down into tokens. These tokens are processed in data centers using FLOPs (number of floating-point operations performed per second). Thus, by establishing the link between requests and the associated number of computations (FLOPs), it becomes possible to work back to the number of GPUs required. From this quantity, we derive the associated material demand.
 
 
-
-L'objectif est de modéliser la demande en matériaux nécessaires au bon fonctionnement de l'IA générative dans un futur proche. L'IA de référence est chatGPT 4 (autour de 17 500 milliards de paramètres). Il est important de noter que les résultats concernent uniquement les besoins matériaux pour le fonctionnement des unités GPU. Les composants d'infrastructure plus larges, tels que les réseaux, le stockage et les systèmes de refroidissement, ne sont pas pris en compte dans cette analyse.
-
-La puce GPU étudiée est la NVIDIA A100, utilisé par OpenAI, Meta, Microsoft.
-Le modèle ChatGPT 4 sera donc la référence dans les calculs, en faisant ensuite l'hypothèse que la consommation en matériaux des autres IA génératives est similaire.
-
-
-Dans une première partie, nous verrons la modèlisation des besoins matériaux relatif à la demande en IA.
-Dans une seconde partie, nous analyserons le résultat de l'analyse au vu des ressources actuelles en matériaux, tout en prenant en compte les facteurs géographiques, géopolitiques et commerciales.
-
-Une grande partie des données de référence proviennent d'une source, qui est la suivante : [1] *From FLOPs to Footprints: The Resource Cost of Artificial Intelligence* ; Sophia Falk, Nicholas Kluge Correa, Sasha Luccioni, Lisa Biber-Freudenberger, and Aimee van Wynsberghe ; 3 Décembre 2025.
-
-Nous avons fait le choix de commencer le modèle en partant des requêtes. Ces requêtes ne sont autres que des chaînes de caractères découpés en tokens. Ces tokens sont traités dans les data centers par des FLOPS (number of floating-point operations it can perform per second). Ainsi, il suffit de faire le lien entre requêtes et nombre de calculs associés (FLOPs) pour pouvoir remonter au nombre de GPUs nécessaires. Avec cette quantité, nous retrouvons la demande en matériaux associée.
-
+A large portion of the reference data comes from a single source, which is the following: [1] From FLOPs to Footprints: The Resource Cost of Artificial Intelligence; Sophia Falk, Nicholas Kluge Correa, Sasha Luccioni, Lisa Biber-Freudenberger, and Aimee van Wynsberghe; December 3, 2025.
